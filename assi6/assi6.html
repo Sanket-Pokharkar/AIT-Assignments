@@ -1,0 +1,63 @@
+<head>
+  <style>
+    .box {
+      align-items: center;
+      margin-left: 1500px;
+      margin-top: 10  0px;
+      padding: 50px;
+      border: 1px solid;
+      width: 200px;
+      height: 500px;
+      background-color: rgb(47, 235, 0);
+      transition: transform 0.3s;
+    }
+    .translate {
+      transform: translate(200px, 200px);
+    }
+    .rotate {
+      transform: rotate(90deg);
+    }
+    .scale {
+      transform: scale(1.5);
+    }
+    .d11{
+      height: 1300px;
+      margin: 50px;
+      padding: 50px;
+      border: 1px solid;
+    }
+    button {
+    width: 220px;
+    height: 100px;
+    font-size: xx-large;
+    color: white;
+    background-color: black;
+}
+  </style>
+</head>
+<body>
+  <div class="d11">
+    <div class="box"></div>
+    <div class="">
+        <button onclick="translateBox()">Translate</button><br><br>
+        <button onclick="rotateBox()"> Rotate </button><br><br>
+        <button onclick="scaleBox()">   Scale   </button><br><br>
+    </div>
+  </div>
+  <script>
+    function translateBox() {
+      var box = document.querySelector('.box');
+      box.classList.toggle('translate');
+    }
+    
+    function rotateBox() {
+      var box = document.querySelector('.box');
+      box.classList.toggle('rotate');
+    }
+
+    function scaleBox() {
+      var box = document.querySelector('.box');
+      box.classList.toggle('scale');
+    }
+  </script>
+</body>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: 'Montserrat';
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .D1 {
+            text-align: center;
+        }
+
+        .P1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .FD1 {
+            margin-bottom: 10px;
+        }
+
+        .I1 {
+            padding: 8px;
+            width: 100%;
+        }
+
+        .FD2 {
+            position: relative;
+        }
+
+        .FD1 .FD2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .FD1 .FD2 input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .B1 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .B1:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="D1">
+            <p class="P1">Registration Form</p>
+            <hr>
+            <form action="registerA.php" method="post" style="margin: 25px;">
+                <div class="FD1">
+                    <input type="text" name="firstname" placeholder="First Name" class="I1">
+                    <br><br>
+                    <input type="text" name="lastname" placeholder="Last Name" class="I1">
+                    <br><br>
+                    <input type="number" name="studid" placeholder="Student Id" class="I1">
+                    <br><br>
+                    <input type="number" name="mobno" placeholder="Mobile No" class="I1">
+                    <br><br>
+                    <input type="text" name="username" placeholder="Username" class="I1">
+                    <br><br>
+                    <input type="password" name="pass" placeholder="Password" class="I1" id="myInput">
+                    <br><br>
+                    <div class="FD1">
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                    </div>
+                </div>
+                <br><br>
+                <input type="submit" value="Sign Up" class="B1">
+                <a href="assi19.html">
+                    <input type="button" value="Sign In" class="B1">
+                </a>
+            </form>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
